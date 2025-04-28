@@ -229,3 +229,58 @@
     color: #e04e4e;
   }
   
+  /* Estilos para el formulario */
+.formulario {
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .formulario h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #d13e3e;
+    margin-bottom: 30px;
+  }
+  
+  .formulario label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .formulario input:focus, .formulario textarea:focus {
+    border-color: #e04e4e;
+    outline: none;
+  }
+  
+  .formulario button {
+    background-color: #f28c28;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .formulario button:hover {
+    background-color: #d97706;
+  }
+  

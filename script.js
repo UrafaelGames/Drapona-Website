@@ -5,6 +5,7 @@ function openModal(seccion) {
     
     modal.style.display = 'block';
   
+    // Contenido basado en la sección seleccionada
     if (seccion === 'cultura') {
       header.innerHTML = "Sobre Nuestra Cultura";
       modalBody.innerHTML = "<p>La cultura Wayuu es una de las más ricas y representativas de Colombia. Cada tejido cuenta historias ancestrales transmitidas de generación en generación.</p>";
@@ -29,5 +30,57 @@ function openModal(seccion) {
   function closeModal() {
     const modal = document.getElementById('modal');
     modal.style.display = 'none';
+  }
+
+  let cart = [];
+  
+  function addToCart(id, nombre, precio) {
+    let product = cart.find(item => item.id === id);
+    if (product) {
+      product.cantidad += 1; 
+    } else {
+      cart.push({ id, nombre, precio, cantidad: 1 }); 
+    }
+  
+    updateCart();
+  }
+  
+  // Mostrar el carrito
+  function openCart() {
+    const cartModal = document.getElementById('cartModal');
+    const cartItems = document.getElementById('cartItems');
+    const totalPrice = document.getElementById('totalPrice');
+  
+    cartItems.innerHTML = ''; 
+    let total = 0;
+  
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.innerHTML = `${item.nombre} - $${item.precio} x ${item.cantidad}`;
+      cartItems.appendChild(div);
+      total += item.precio * item.cantidad;
+    });
+  
+    totalPrice.textContent = total;
+  
+    cartModal.style.display = 'block';
+  }
+  
+  function closeCart() {
+    const cartModal = document.getElementById('cartModal');
+    cartModal.style.display = 'none';
+  }
+  
+  function checkout() {
+    alert("¡Gracias por tu compra!");
+    cart = []; 
+    updateCart();
+    closeCart();
+  }
+  
+  function updateCart() {
+    const cartLink = document.querySelector('nav a[href="javascript:void(0)"][onclick="openCart()"]');
+    const totalItems = cart.reduce((sum, item) => sum + item.cantidad, 0);
+    cartLink.textContent = `Carrito (${totalItems})`;
   }
   
