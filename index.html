@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drapona | Artesanía Wayuu con Propósito</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Drapona</h1>
+    <p>Artesanía Wayuu que cuenta historias</p>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="javascript:void(0)" onclick="openModal('cultura')">Sobre Nuestra Cultura</a>
+    <a href="javascript:void(0)" onclick="openModal('artesanias')">Qué Representan Nuestras Artesanías</a>
+    <a href="javascript:void(0)" onclick="openModal('proceso')">Cómo es el Proceso de Tejido</a>
+    <a href="javascript:void(0)" onclick="openModal('economia')">Sus Actividades Económicas</a>
+    <a href="javascript:void(0)" onclick="openModal('produccion')">Producción Artesanal</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Descubre el arte detrás de cada puntada</h1>
+    <p>Cada diseño Wayuu representa cultura, identidad y lucha</p>
+  </section>
+
+  <section class="contenido">
+    <h2>Galería de Artesanías</h2>
+    <div class="galeria">
+      <div class="producto">
+        <img src="images/mochila1.jpg" alt="Mochila Wayuu tradicional">
+        <p>Mochila con patrón de tortuga ancestral - símbolo de protección.</p>
+      </div>
+      <div class="producto">
+        <img src="images/imagen9.jpg" alt="Manilla tejida">
+        <p>Manilla color cielo - símbolo de esperanza y espiritualidad.</p>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <a href="javascript:void(0)" class="btn" onclick="openModal('compra')">¡Quiero mi mochila!</a>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-header" class="modal-header"></div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>¡Gracias por apoyar el arte y la cultura Wayuu!</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
