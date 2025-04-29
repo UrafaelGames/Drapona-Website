@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda Drapona</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background-color: #e67e22;
+      padding: 30px 0;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .cart-icon {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .cart-modal {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 25px;
+      background-color: white;
+      width: 300px;
+      max-height: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      padding: 20px;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+    .mochila-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .mochila-item {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .mochila-item:hover {
+      transform: scale(1.03);
+    }
+
+    .mochila-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .mochila-info {
+      padding: 20px;
+    }
+
+    .mochila-info h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #e67e22;
+    }
+
+    .mochila-info p {
+      font-size: 0.95em;
+      margin: 10px 0;
+    }
+
+    .mochila-info span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nuestras Mochilas Wayuu</h1>
+    <p>Elige tu favorita por solo $150.000 COP</p>
+  </header>
+
+  <section class="mochila-grid">
+    
+    <!-- Repite este bloque para cada mochila -->
+    <div class="mochila-item">
+      <img src="mochila1.jpg" alt="Mochila Wayuu 1">
+      <div class="mochila-info">
+        
+        <h3>Mochila Wayuu 1</h3>
+        <p>Diseño artesanal colorido y elegante.</p>
+        <span>$150.000 COP</span>
+      </div>
+    </div>
+    
+
+    <!-- Copia y pega esto 9 veces más cambiando imagen y nombre -->
+    <div class="mochila-item">
+      <img src="mochila3.jpg" alt="Mochila Wayuu 2">
+      <div class="mochila-info">
+        <h3>Mochila Wayuu 2</h3>
+        <p>Hecha a mano con amor por artesanas Wayuu.</p>
+        <span>$150.000 COP</span>
+      </div>
+    </div>
+    <div class="mochila-item">
+        <img src="mochila7.jpg" alt="Mochila Wayuu 2">
+        <div class="mochila-info">
+          <h3>Mochila Wayuu 3</h3>
+          <p>Hecha a mano con amor por artesanas Wayuu.</p>
+          <span>$150.000 COP</span>
+        </div>
+      </div>
+      <div class="mochila-item">
+        <img src="mochila8.jpg" alt="Mochila Wayuu 2">
+        <div class="mochila-info">
+          <h3>Mochila Wayuu 4</h3>
+          <p>Hecha a mano con amor por artesanas Wayuu.</p>
+          <span>$90.000 COP</span>
+        </div>
+      </div>
+      <div class="mochila-item">
+        <img src="mochila11.jpg" alt="Mochila Wayuu 2">
+        <div class="mochila-info">
+          <h3>Mochila Wayuu 5</h3>
+          <p>Hecha a mano con amor por artesanas Wayuu.</p>
+          <span>$150.000 COP</span>
+        </div>
+      </div>
+      <div class="mochila-item">
+        <img src="mochila13.jpg" alt="Mochila Wayuu 2">
+        <div class="mochila-info">
+          <h3>Mochila Wayuu 6</h3>
+          <p>Hecha a mano con amor por artesanas Wayuu.</p>
+          <span>$150.000 COP</span>
+        </div>
+      </div>
+      <div class="mochila-item">
+        <img src="mochila14.jpg" alt="Mochila Wayuu 2">
+        <div class="mochila-info">
+          <h3>Mochila Wayuu 7</h3>
+          <p>Hecha a mano con amor por artesanas Wayuu.</p>
+          <span>$150.000 COP</span>
+        </div>
+      </div>
+      <div class="mochila-item">
+        <img src="mochila15.jpg" alt="Mochila Wayuu 2">
+        <div class="mochila-info">
+          <h3>Mochila Wayuu 8</h3>
+          <p>Hecha a mano con amor por artesanas Wayuu.</p>
+          <span>$150.000 COP</span>
+        </div>
+      </div>
+
+    </section>
+<!-- Ícono flotante del carrito -->
+<div id="cart-icon" style="position: fixed; bottom: 30px; right: 30px; background-color: #e67e22; color: white; padding: 15px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000;">
+    🛒
+    <span id="cart-count" style="background: #c0392b; color: white; border-radius: 50%; padding: 3px 7px; font-size: 0.8em; margin-left: 5px;">0</span>
+  </div>
+  
+  <!-- Modal del carrito -->
+  <div id="cart-modal" style="display: none; position: fixed; bottom: 90px; right: 30px; width: 300px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-radius: 10px; overflow: hidden; z-index: 1001;">
+    <div style="padding: 20px; max-height: 300px; overflow-y: auto;" id="cart-items">
+      <p>Tu carrito está vacío.</p>
+    </div>
+    <div style="padding: 15px; border-top: 1px solid #ccc; text-align: center;">
+      <button style="background-color: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">Proceder a comprar</button>
+    </div>
+  </div>
+  
+  <script>
+    const cart = [];
+    const cartIcon = document.getElementById('cart-icon');
+    const cartModal = document.getElementById('cart-modal');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+  
+    // Mostrar u ocultar el modal al hacer clic en el icono
+    cartIcon.addEventListener('click', () => {
+      cartModal.style.display = cartModal.style.display === 'none' ? 'block' : 'none';
+    });
+  
+    // Función para actualizar el carrito
+    function updateCart() {
+      cartItemsContainer.innerHTML = '';
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+      } else {
+        cart.forEach(item => {
+          const div = document.createElement('div');
+          div.style.marginBottom = '10px';
+          div.innerHTML = `<strong>${item.name}</strong><br><span style="color: #27ae60;">${item.price}</span>`;
+          cartItemsContainer.appendChild(div);
+        });
+      }
+      cartCount.textContent = cart.length;
+    }
+  
+    // Función global para añadir productos
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCart();
+    }
+  
+    // Agrega botones de "Añadir al carrito" en cada mochila
+    document.querySelectorAll('.mochila-item').forEach(item => {
+      const name = item.querySelector('h3').innerText;
+      const price = item.querySelector('span').innerText;
+      const button = document.createElement('button');
+      button.innerText = 'Añadir al carrito';
+      button.style.backgroundColor = '#e67e22';
+      button.style.color = 'white';
+      button.style.border = 'none';
+      button.style.padding = '10px';
+      button.style.marginTop = '10px';
+      button.style.borderRadius = '5px';
+      button.style.cursor = 'pointer';
+      button.onclick = () => addToCart(name, price);
+      item.querySelector('.mochila-info').appendChild(button);
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drapona | Artesanía Wayuu con Propósito</title>
+
+  <!-- Fuentes tipográficas artesanales -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <style>
+    * /* --- Header con Atardecer Guajiro --- */
+header {
+  background: linear-gradient(135deg, #e54b4b, #f18f43, #f9c74f, #83c5be, #1a759f);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,236,168,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-20px) translateX(20px); }
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+    body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: linear-gradient(to bottom right, #ffffff 80%, #cde7f9 20%);
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px; /* Aumenta el número para agrandar */
+}
+
+
+    h1, h2, h3, .btn {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    header {
+      background-color: #e04e4e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      color: white;
+      background-color: #d97706;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #f28c28;
+    }
+
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mochila7.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: #fff;
+      padding: 140px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .contenido {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contenido h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #d13e3e;
+    }
+
+    .contenido p {
+      margin-bottom: 20px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .producto {
+      width: 280px;
+      text-align: center;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .producto img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #f28c28;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d97706;
+    }
+
+    footer {
+      background-color: #e04e4e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    @keyframes serpienteAzul {
+      0% {
+        transform: translateX(0%) translateY(0%) rotate(0deg);
+      }
+      50% {
+        transform: translateX(-10%) translateY(10%) rotate(180deg);
+      }
+      100% {
+        transform: translateX(0%) translateY(0%) rotate(360deg);
+      }
+    }
+
+    /* Estilo del modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 70%;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      background: linear-gradient(45deg, #ff6f61, #f1c6af);
+    }
+
+    .modal-header {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #d13e3e;
+      text-align: center;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2em;
+      color: #e04e4e;
+      cursor: pointer;
+    }
+
+    .mochila-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      background-color: #f3f3f3;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .mochila-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+    }
+
+    .mochila-info {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    .mochila-info h3 {
+      color: #e04e4e;
+      margin-bottom: 5px;
+    }
+
+    .mochila-info p {
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .mochila-info span {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #e04e4e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Drapona</h1>
+      <p>Artesanías Wayuu que cuenta historias</p>
+    </div>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <nav>
+      <a href="cultura.html">Sobre Nuestra Cultura</a>
+      <a href="artesanias.html">Qué Representan Nuestras Artesanías</a>
+      <a href="proceso.html">Cómo es el Proceso de Tejido</a>
+      <a href="economia.html">Sus Actividades Económicas</a>
+      <a href="produccion.html">genesis de nuestra cultura</a>
+    </nav>
+  </nav>
+
+  <section class="hero">
+    <h1>Descubre el arte detrás de cada puntada</h1>
+    <p>Cada diseño Wayuu representa cultura, identidad y lucha</p>
+  </section>
+
+  <!-- Contenido de la página -->
+  <section class="contenido">
+    <h2>Galería de Artesanías</h2>
+    <div class="galeria">
+      <div class="producto">
+        <img src="mochila1.jpg" alt="Mochila Wayuu tradicional">
+        <p>Mochila con patrón de tortuga ancestral - símbolo de protección.</p>
+      </div>
+      <div class="producto">
+        <img src="imagen9.jpg" alt="Manilla tejida">
+        <p>Manillas de colores vivos - símbolo de esperanza</p>
+      </div>
+      <div class="producto">
+        <img src="chinchorro1.jpg" alt="Manilla tejida">
+        <p>chinchorro color cielo mezclado con negro - simbolo de espiritualidad.</p>
+      </div>
+    </div>
+    
+    <!-- Botón "Quiero mi mochila" -->
+    <div class="btn-container">
+      <a href="tienda.html" class="btn">¡Quiero mi mochila!</a>
+    </div>    
+  </section>
+        <!-- Contenido dinámico del modal -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>¡Gracias por apoyar el arte y la cultura Wayuu!</p>
+    <a href="https://www.facebook.com/share/1AXUMocdvd/" 
+    href="https://www.facebook.com/share/1AXUMocdvd/" target="_blank">Visita nuestra página de Facebook</a>
+
+  </footer>
+  
+  <script>
+    function openModal(seccion) {
+      const modal = document.getElementById('modal');
+      const modalBody = document.getElementById('modal-body');
+      const header = document.getElementById('modal-header');
+      
+      modal.style.display = 'block';
+
+      if (seccion === 'cultura') {
+        header.innerHTML = "Sobre Nuestra Cultura";
+        modalBody.innerHTML = "<p>La cultura Wayuu es una de las más ricas y representativas de Colombia. Cada tejido cuenta historias ancestrales transmitidas de generación en generación.</p>";
+      } else if (seccion === 'artesanias') {
+        header.innerHTML = "Qué Representan Nuestras Artesanías";
+        modalBody.innerHTML = "<p>Las mochilas Wayuu representan símbolos de protección, fortaleza y conexión espiritual con la naturaleza.</p>";
+      } else if (seccion === 'proceso') {
+        header.innerHTML = "Cómo es el Proceso de Tejido";
+        modalBody.innerHTML = "<p>Tejer una mochila puede tardar semanas, comenzando con la selección de hilos y utilizando técnicas tradicionales únicas de la etnia Wayuu.</p>";
+      } else if (seccion === 'economia') {
+        header.innerHTML = "Sus Actividades Económicas";
+        modalBody.innerHTML = "<p>La economía Wayuu gira alrededor de la artesanía, la ganadería y el comercio local.</p>";
+      } else if (seccion === 'produccion') {
+        header.innerHTML = "Producción Artesanal";
+        modalBody.innerHTML = "<p>Cada pieza es elaborada a mano con dedicación y amor, utilizando materiales naturales y técnicas tradicionales.</p>";
+      } else if (seccion === 'compra') {
+        header.innerHTML = "Nuestros Productos";
+        modalBody.innerHTML = `
+         
+        `;
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+    // Cerrar modal al hacer clic fuera del contenido
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+    
+  </script>
+</body>
+</html>

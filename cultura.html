@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drapona | Cultura Wayuu</title>
+  <!-- Fuentes tipográficas -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Animaciones CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* --- Estilos Base --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      background: linear-gradient(135deg, #f9f9f9 0%, #e8f4f8 100%);
+      color: #333;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Quicksand', sans-serif;
+      color: #d13e3e;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    /* --- Paleta de Colores Wayuu --- */
+    :root {
+      --rojo-wayuu: #e04e4e;
+      --naranja: #f28c28;
+      --azul: #5dade2;
+      --verde: #58d68d;
+      --amarillo: #f4d03f;
+    }
+    
+    /* --- Header --- */
+    header {
+      background: linear-gradient(45deg, var(--rojo-wayuu), var(--naranja));
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      animation: bubble 15s infinite linear;
+    }
+    
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s;
+    }
+    
+    /* --- Navegación --- */
+    nav {
+      background-color: rgba(0,0,0,0.8);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(5px);
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    nav li {
+      margin: 0 15px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      font-family: 'Quicksand', sans-serif;
+    }
+    
+    nav a:hover {
+      background-color: var(--rojo-wayuu);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(224, 78, 78, 0.4);
+    }
+    
+    nav a.active {
+      background-color: var(--rojo-wayuu);
+    }
+    
+    /* --- Contenido Principal --- */
+    .contenido {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    /* --- Secciones Temáticas --- */
+    .seccion {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .seccion:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+    
+    .seccion::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--rojo-wayuu), var(--naranja));
+    }
+    
+    /* --- Diseño para Imágenes --- */
+    .imagen-destacada {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.5s ease;
+      border: 5px solid white;
+    }
+    
+    .imagen-destacada:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+    
+    /* --- Grid de Imágenes --- */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    /* --- Citas Destacadas --- */
+    blockquote {
+      background: linear-gradient(135deg, rgba(224, 78, 78, 0.1) 0%, rgba(242, 140, 40, 0.1) 100%);
+      border-left: 5px solid var(--rojo-wayuu);
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    blockquote::before {
+      content: ""
+      font-size 60px;
+      color: var(--rojo-wayuu);
+      opacity: 0.2;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    
+    /* --- Footer --- */
+    footer {
+      background: linear-gradient(45deg, #333, #111);
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 80px;
+    }
+    
+    footer p {
+      margin-bottom: 20px;
+    }
+    
+    .redes-sociales {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .redes-sociales a {
+      color: white;
+      font-size: 1.5em;
+      transition: transform 0.3s ease;
+    }
+    
+    .redes-sociales a:hover {
+      transform: translateY(-5px) scale(1.2);
+      color: var(--naranja);
+    }
+    
+    /* --- Animaciones Personalizadas --- */
+    @keyframes bubble {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(50px, 30px) rotate(90deg); }
+      50% { transform: translate(100px, 0) rotate(180deg); }
+      75% { transform: translate(50px, -30px) rotate(270deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav li {
+        margin: 5px 0;
+      }
+      
+      .seccion {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="animate__animated animate__fadeIn">
+    <h1>Cultura Wayuu</h1>
+    <p>Una herencia ancestral viva</p>
+  </header>
+  
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="cultura.html" class="active">Cultura</a></li>
+
+    </ul>
+  </nav>
+  
+  <!-- Contenido Principal -->
+  <main class="contenido">
+    <!-- Sección 1: Introducción -->
+    <section class="seccion animate__animated animate__fadeInUp">
+      <h2>El Pueblo Wayuu</h2>
+      <img src="cultura3.jpg" alt="Comunidad Wayuu" class="imagen-destacada">
+      <p>Los Wayuu habitan en la zona norte de Colombia y Venezuela, concretamente en el Departamento de La Guajira y en el Estado Zulia en Venezuela.</p>
+      <p>No se sabe con seguridad su origen, los historiadores estiman que pudieron haber llegado de las Antillas y la región Amazónica. Cuando los conquistadores españoles llegaron a la península de La Guajira, los wayuu ya estaban organizados bajo sus usos y costumbres, a pesar de que las misiones católicas trataron de quebrantar sus creencias, mantuvieron buena parte de las mismas.</p>
+      
+      <!-- Espacio para imagen adicional -->
+      <div class="galeria">
+        <img src="cultura1.jpeg" alt="Territorio Wayuu">
+        <img src="cultura2.jpg" alt="Familia Wayuu">
+      </div>
+    </section>
+    
+    <!-- Sección 2: Lengua y Tradición Oral -->
+    <section class="seccion animate__animated animate__fadeInUp">
+      <h2>Lengua y Tradición Oral</h2>
+      <img src="lengua2.jpg" alt="Niños Wayuu aprendiendo" class="imagen-destacada">
+      <p>La lengua wayuu, se denomina Wayunaiki, perteneciente a la familia lingüística Arawak, se habla en toda la península de La Guajira con extensión en el Estado Zulia en Venezuela. Esta lengua aún conserva su vitalidad lingüística.</p>
+      
+      <blockquote>
+        "A través de la historia, el principal medio para la transmisión de saberes y toda la cosmovisión es la oralidad, mediante su lengua nativa"
+      </blockquote>
+      
+      <p>Los miembros de esta etnia expresan sus sentimientos, emociones, vivencias, mitos, leyendas, tradiciones milenarias de generación en generación a través de la oralidad, esta es una forma de mantener vivas sus creencias y manifestaciones más auténticas.</p>
+    </section>
+    
+    <!-- Sección 3: Educación Tradicional -->
+    <section class="seccion animate__animated animate__fadeInUp">
+      <h2>Educación Tradicional</h2>
+      <img src="educacion3.jpg" alt="Niños Wayuu aprendiendo" class="imagen-destacada">
+      <p>A los niños se les enseña a pastorear, a pescar y cultivar la tierra y a las niñas por lo general en el encierro, se les enseña a tejer, a las tareas de la casa y todo lo que tiene que ver con su rol de mujer en la comunidad. Por lo tanto, la lengua materna se constituye en el medio fundamental para su desarrollo individual, social, emocional y cognitivo, lo que lo identifica como miembro de su etnia.</p>
+      
+      <!-- Espacio para imagen adicional -->
+      <div class="galeria">
+        <img src="educacion2.JPG" alt="Niños Wayuu">
+        <img src="educacion1.jpg" alt="Mujeres tejiendo">
+      </div>
+    </section>
+    
+    <!-- Continúa con las demás secciones siguiendo el mismo patrón -->
+    <!-- Sección 4: La Vivienda -->
+    <section class="seccion animate__animated animate__fadeInUp">
+      <h2>La Vivienda Wayuu</h2>
+      <img src="vivienda1.jpg" alt="Vivienda tradicional Wayuu" class="imagen-destacada">
+      <p>Llamada piichi o miichi, se trata de pequeñas casas divididas en dos salas, las tradicionales solían construirse con yotojoro, barro, caña seca y paja, en la actualidad prefieren técnicas y materiales modernos como el cemento.</p>
+    </section>
+    
+    <!-- Sección 5: Artesanías -->
+    <section class="seccion animate__animated animate__fadeInUp">
+      <h2>Artesanías Wayuu</h2>
+      <img src="artesanias1.jpeg" alt="Artesanías Wayuu" class="imagen-destacada">
+      <p>El tejido ha sido una tradición que se va transmitiendo a las niñas a muy temprana edad, esta labor que combinan con las actividades cotidianas, en los ratos libres, durante las visitas y cuando van de viaje. Desde hace siglos, conservan ritos de iniciación en este arte (en el encierro preparan a las niñas para la vida); quien es hábil tejiendo es digna de respeto y quien posee muchas y finas piezas tejidas adquiere poder y prestigio.</p>
+      <p>Para que la tradición se mantenga viva, tejer es una manera de mostrar sabiduría y creatividad.</p>
+    </section>
+    
+    
+  </main>
+  
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Drapona - Artesanía Wayuu con Propósito</p>
+    <p>Preservando la cultura indígena desde el corazón de La Guajira</p>
+    <a href="https://www.facebook.com/share/1AXUMocdvd/" 
+    target="_blank">Visita nuestra pagina de facebook</a>
+    <div class="redes-sociales">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+  
+  <!-- Iconos de Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- Script para animaciones al hacer scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const secciones = document.querySelectorAll('.seccion');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__fadeInUp');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      secciones.forEach(seccion => {
+        observer.observe(seccion);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* Reset básico para que todo sea más uniforme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+main h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+/* Párrafos */
+main p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 30px;
+    border-top: 2px solid #333;
+}
