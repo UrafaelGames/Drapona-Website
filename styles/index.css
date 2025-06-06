@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fffaf4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #726d6d;
+    color: white;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.barra-naranja {
+  background-color: rgba(255, 0, 0, 0.75); 
+  height: 50px; 
+  width: 100%;
+}
+
+.navegacion {
+   display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navegacion a {
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.navegacion a {
+    color: white;
+}
+
+header div:first-child {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(58, 14, 14);
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
+    margin-top: -20px;
+}
+
+.logo span {
+    font-size: 30px;         
+    color: black;
+    align-self: flex-end;    
+    margin-top: 2px; 
+      margin-left: -20px;
+}
+
+.telefono {
+    background-color: #1e7c1e;
+    color: #d7ffd7;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.seccion-principal {
+  background-image: url('../images/DN_BackgroundImage.jpg'); 
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white;                
+  padding: 60px 20px;          
+  text-align: center;          
+  min-height: 1200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.seccion-principal h1 {
+color: rgb(255, 0, 0, 45);
+  font-size: 80px;      
+  margin-top: 80px;      
+}
+
+.seccion-principal h2 {
+    color: rgb(255, 0, 0, 45);
+  font-size:  80px;       
+  margin-top: 10px;      
+}
+
+
+.rectangulo-final {
+  background-color: rgba(255, 0, 0, 0.75); 
+  height: 100px;
+  width: 97vw; 
+  margin: 0 auto;
+  position: relative;
+  margin-top: -200px;
+  height: 200px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beneficios {
+  display: flex;
+  gap: 80px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+   padding-top: 40px;
+   justify-content: center;
+}
+
+.beneficio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+}
+
+.beneficio-item img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.categorias-tienda {
+    background-image:  url('../images/DN_ProductsBackground.png');
+    background-size: cover;
+    background-position: center top 200px;
+    background-repeat: no-repeat;
+    padding: 100px 20px 300px 20px; /* arriba, derecha, abajo, izquierda */
+    color: white;
+    position: relative;
+    z-index: 1;
+    min-height: 1400px;
+    overflow: hidden;
+}
+
+.subtitulo-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 40px 0;
+    position: relative;
+}
+
+.subtitulo-seccion::before,
+.subtitulo-seccion::after {
+    content: "";
+    flex: 1;
+    border-bottom: 5px solid black;
+    margin: 0 20px;
+}
+
+.lista-categorias {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 60px;
+padding: 50px 30px 30px 30px;
+list-style: none;
+margin-top: 70px;
+}   
+
+.categoria {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.categoria img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 18px;
+    align-self: center;
+}
+
+.categoria h3 {
+    color: black;
+    font-size: 1.3rem;
+    margin: 8px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.categoria p {
+    font-size: 1.1rem;
+    color: gray;
+    text-align: left;
+    width: 100%;
+}
