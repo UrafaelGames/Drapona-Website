@@ -1,0 +1,720 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fffaf4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #726d6d;
+    color: white;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.barra-naranja {
+  background-color: rgba(255, 0, 0, 0.75); 
+  height: 50px; 
+  width: 100%;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
+.navegacion a {
+  padding: 8px 20px;
+  background-color: #666; 
+  border-radius: 999px;     
+  text-decoration: none;
+  color: #000;              
+  font-size: 1em;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.navegacion a:hover {
+  background-color: #888;  
+}
+
+
+header div:first-child {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(58, 14, 14);
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
+    margin-top: -20px;
+}
+
+.logo span {
+    font-size: 30px;         
+    color: black;
+    align-self: flex-end;    
+    margin-top: 2px; 
+      margin-left: -20px;
+}
+
+.telefono {
+    background-color: #1e7c1e;
+    color: #d7ffd7;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.seccion-principal {
+  background-image: url('../images/DN_BackgroundImage.jpg'); 
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white;                
+  padding: 60px 20px;          
+  text-align: center;          
+  min-height: 1200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.seccion-principal h1 {
+color: rgb(255, 0, 0, 45);
+  font-size: 80px;      
+  margin-top: 80px;      
+}
+
+.seccion-principal h2 {
+    color: rgb(255, 0, 0, 45);
+  font-size:  80px;       
+  margin-top: 10px;      
+}
+
+
+.rectangulo-final {
+  background-color: rgba(255, 0, 0, 0.75); 
+  height: 100px;
+  width: 97vw; 
+  margin: 0 auto;
+  position: relative;
+  margin-top: -200px;
+  height: 200px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beneficios {
+  display: flex;
+  gap: 80px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+   padding-top: 40px;
+   justify-content: center;
+}
+
+.beneficio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+}
+
+.beneficio-item img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.categorias-tienda {
+    background-image:  url('../images/DN_ProductsBackground.png');
+    background-size: cover;
+    background-position: center top 200px;
+    background-repeat: no-repeat;
+    padding: 100px 20px 300px 20px; /* arriba, derecha, abajo, izquierda */
+    color: white;
+    position: relative;
+    z-index: 1;
+    min-height: 1400px;
+    overflow: hidden;
+    padding-right: 60px;
+}
+
+
+.decorador-vertical {
+  position: absolute;
+  right: -75px;
+  z-index: 1;
+  width: 300px; 
+  height: 500px; 
+  object-fit: contain;
+}
+
+.decorador-superior {
+  top:  150px; 
+}
+
+.decorador-inferior {
+  bottom: -40px; 
+}
+
+
+.subtitulo-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 40px 0;
+    position: relative;
+}
+
+.subtitulo-seccion::before,
+.subtitulo-seccion::after {
+    content: "";
+    flex: 1;
+    border-bottom: 5px solid black;
+    margin: 0 20px;
+}
+
+.lista-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas horizontales */
+  gap: 60px;
+  padding: 50px 30px 30px 30px;
+  list-style: none;
+  margin-top: 70px;
+}
+
+.categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra imagen y texto horizontalmente */
+  text-align: center;
+}
+
+.categoria img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.categoria h3 {
+  color: black;
+  font-size: 1.3rem;
+  margin: 8px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.categoria p {
+  font-size: 1.1rem;
+  color: gray;
+}
+
+
+/*Mochilas disponobñe*/
+
+.mochilas-disponibles {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.decorador-izquierdo {
+  position: absolute;
+  left: -60px;
+  z-index: 1;
+  width: 300px;
+  height: 500px;
+  pointer-events: none;
+}
+
+.decorador-izquierdo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Posiciones verticales */
+.decorador-superior {
+  top: 150px;
+}
+
+.decorador-inferior {
+  bottom: -40px;
+}
+
+.subtitulo-seccion {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: bold;
+}
+
+.lista-productos {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.producto img {
+  width: 288px;
+  height: 322px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+}
+
+.producto button {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 0.95em;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap; /* <-- esto evita los saltos de línea */
+  transition: all 0.2s ease-in-out;
+}
+
+.producto button:hover {
+  background-color: black;
+  color: white;
+}
+
+.nombre-producto {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.precio {
+  color: #444;
+  font-size: 0.95em;
+  margin: 0 0 10px;
+}
+
+.boton-carrito {
+  background-color: #000;
+  color: white;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-carrito:hover {
+  background-color: #444;
+}
+
+.producto.destacado {
+  position: relative;
+}
+
+.etiqueta-oferta {
+  position: absolute;
+  top: -15px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  z-index: 2;
+}
+
+.imagen-con-borde {
+  background-color: #ffe500; /* amarillo */
+  padding: 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.imagen-con-borde img {
+  width: 288px;
+  height: 322px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.subtitulo-producto {
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.nombre-producto {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #222;
+}
+
+.pie-pagina {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+}
+
+.footer-bloque {
+  width: 48%;
+  box-sizing: border-box;
+}
+
+.footer-bloque.izquierdo {
+  background-color: #5b5b5b; /* Gris oscuro */
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bloque.derecho {
+  color: black;
+  padding: 20px;
+  transform: translateX(80px); 
+}
+
+
+.qr-footer {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.contenedor-lineas {
+  position: relative;
+  height: 60px; 
+  overflow: visible; 
+}
+
+.linea-horizontal {
+  height: 30px;
+  background: linear-gradient(to bottom, black 20%, #FF6100 20%);
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+}
+
+
+.linea-vertical {
+  position: absolute;
+  width: 28px; 
+  height: 300px; 
+  background-color: #FF6100;
+  right: 0;
+  bottom: 30px;
+  clip-path: polygon(0 5%, 92% 0, 100% 100%, 0% 100%);
+}
+
+.linea-negra {
+  position: absolute;
+  width: 6px; 
+  height: 300px; 
+  background-color: black;
+  left: 0; 
+  bottom: 25px; 
+  border-top-left-radius: 4px; 
+}
+
+/* mobil */
+
+/* Estilos para móviles (hasta 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo span {
+    font-size: 24px;
+    margin-left: 0;
+  }
+
+  .navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .navegacion a {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+
+  .seccion-principal {
+    min-height: 600px;
+    padding: 30px 15px;
+  }
+
+  .seccion-principal h1,
+  .seccion-principal h2 {
+    font-size: 2.5em;
+    margin-top: 30px;
+  }
+
+  .rectangulo-final {
+    width: 100vw;
+    margin-top: -100px;
+    height: 150px;
+  }
+
+  .beneficios {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .categorias-tienda {
+    min-height: auto;
+    padding: 50px 15px 150px;
+    background-position: center top 100px;
+  }
+
+  .lista-categorias {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .decorador-vertical,
+  .decorador-izquierdo {
+    display: none;
+  }
+
+  .lista-productos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .producto img,
+  .imagen-con-borde img {
+    width: 100%;
+    max-width: 288px;
+    height: auto;
+  }
+
+  .pie-pagina {
+    flex-direction: column;
+  }
+
+  .footer-bloque {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-bloque.derecho {
+    transform: none;
+  }
+}
+
+/* Estilos para tablets (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lista-categorias,
+  .lista-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .seccion-principal h1,
+  .seccion-principal h2 {
+    font-size: 3.5em;
+  }
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Estilos del menú hamburguesa */
+.menu-toggle {
+  display: none; /* Oculta por defecto en desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Estilos cuando el menú está activo */
+.menu-toggle.active .hamburger:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .hamburger:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .hamburger:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Media Query para móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Muestra el botón en móviles */
+  }
+  
+  .navegacion {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #726d6d;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding-top: 80px;
+  }
+  
+  .navegacion.active {
+    right: 0;
+  }
+  
+  .navegacion a {
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 0;
+    color: white !important;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .telefono {
+    margin-top: 20px;
+    background-color: #1e7c1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+
+.layer-compra {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layer-compra .contenido-layer {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.layer-compra ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.layer-compra input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.layer-compra button {
+  background: #f36c3d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.oculto {
+  display: none;
+}

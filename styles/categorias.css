@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  position: relative;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fffaf4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+      min-height: 100vh;
+}
+
+
+header {
+  position: relative;
+    background-color: #080808;
+    overflow: hidden;
+    color: white;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.decoracion-elipse {
+  position: absolute;
+  top: 0px;   
+  right: -30px; 
+  width: 200px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* Sección del logo */
+.logo {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    gap: 5px;
+}
+
+.logo img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    margin-top: 0; 
+}
+
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.navegacion a {
+    padding: 6px 14px;
+    /*background-color: #333;*/
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;             
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.navegacion a:hover {
+   /* background-color: #555;*/
+    text-decoration: underline;
+}
+
+.icono-regresar {
+  width: 40px;     
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.icono-regresar:hover {
+  transform: scale(1.1); 
+}
+
+
+.categorias-wayuu {
+    /* background-color: #f5f5f5; */  
+    padding: 20px;
+    /* border-radius: 12px; */        
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */  
+    font-weight: bold;
+    width: 300px;
+    position: absolute; 
+    top: 300px;   
+    left: 18%;     
+    transform: translateX(-50%); 
+}
+
+
+.categorias-wayuu h2 {
+    font-size: 1.6em;
+    color: #111; 
+    margin-bottom: 15px;
+    text-align: left;  
+    padding-left: 5px; 
+}
+
+.categorias-wayuu ul {
+    padding-left: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.categorias-wayuu li {
+    margin-bottom: 8px;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-content: start; 
+    align-items: start;
+    max-width: 600px; 
+    margin-top: 90px; 
+    margin-left: 70px; 
+}
+
+.seccion-productos-wayuu {
+  position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-left: -120px;
+}
+
+.titulo-wayuu {
+    position: relative;     
+    left: 550px;             
+    top: 10px;            
+    
+    font-weight: bold;
+    font-size: 2em;
+    color: #333;
+}
+
+.imagen-lateral-derecha {
+    position: absolute;
+    top: 0;
+    right: -150px; 
+    width: 400px;
+    z-index: -2;
+}
+
+.imagen-lateral-derecha img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.decoracion-izquierda-abajo {
+    position: absolute;
+    bottom: 10px; 
+    left: 100px;  
+    width: 300px;  
+    z-index: -2;   
+}
+
+.decoracion-izquierda-abajo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.contenido-wayuu {
+    flex-grow: 1;
+    max-width: 60%; 
+}
+
+.producto {
+    text-align: center;
+   /* border: 1px solid #e0e0e0;*/
+    padding: 10px;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto button {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 0.95em;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap; /* <-- esto evita los saltos de línea */
+  transition: all 0.2s ease-in-out;
+}
+
+.producto button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.decorador-vertical {
+  position: absolute;
+  right: -200px;
+  z-index: -2;
+  width: 250px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.decorador-superior {
+  top: 40px;
+}
+
+/* Segundo decorador más abajo */
+.decorador-medio {
+  top: 40px;
+}
+
+/* Tercer decorador más cerca del final */
+.decorador-inferior {
+  bottom: -200px; 
+}
+
+
+
+.espaciador-final {
+  height: 400px; 
+}
+
+
+/*Footer*/
+
+.socials {
+  position: absolute;
+  top: 1580px;    
+  right: 50px;     
+  z-index: -1;
+}
+
+
+.linea-decorativa-inferior {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.linea-decorativa-inferior img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
